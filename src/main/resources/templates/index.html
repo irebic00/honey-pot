@@ -36,8 +36,9 @@
         <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand d-flex align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                <strong>Quick Picture</strong>&nbsp; - album uploaded by&nbsp;<div th:text="${dummyUserName}"></div>
+                <strong>Quick Picture</strong>
             </a>
+            <p class="navbar-brand d-flex align-items-center">uploaded by&nbsp;<i>[[${dummyUserName}]]</i></p>
         </div>
     </div>
 </header>
@@ -58,7 +59,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +89,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +105,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +120,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +135,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +151,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +166,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +181,7 @@
                                         <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
                                         
                                     </div>
-                                    <small class="text-muted">9 mins</small>
+                                    <small class="text-muted">[[${createdAt}]]</small>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +220,7 @@
             <p class="float-right">
                 <a href="#">Back to top</a>
             </p>
-            <p>Quick Picture is © under USA license LSI-183-111-987876</p>
+            <p>Quick Picture© is registered in Sacrament CA USA under license LSI-183-111-987876</p>
         </div>
     </footer>
 

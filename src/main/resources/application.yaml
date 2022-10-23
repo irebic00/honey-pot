@@ -18,4 +18,4 @@ spring:
       path: /locations/h2
 
 app:
-  dummy-username: mikica_pikica
+  dummy-username: anonymous user

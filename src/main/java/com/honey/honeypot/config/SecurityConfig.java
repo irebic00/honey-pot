@@ -1,5 +1,8 @@
 package com.honey.honeypot.config;
 
+import com.honey.honeypot.repository.startup.Startup;
+import com.honey.honeypot.repository.startup.StartupRepository;
+import com.honey.honeypot.service.StartupService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Configuration;
@@ -11,12 +14,15 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.time.LocalDate;
+
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final SecurityProperties securityProperties;
+    private final StartupService startupService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -33,6 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 .httpBasic();
+        startupService.createStartup(LocalDate.now());
     }
 
     @Override

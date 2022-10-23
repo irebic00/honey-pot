@@ -1,4 +1,4 @@
-package com.honey.honeypot.repository;
+package com.honey.honeypot.repository.geo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

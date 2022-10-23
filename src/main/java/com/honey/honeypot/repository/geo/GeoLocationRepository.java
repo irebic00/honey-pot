@@ -1,4 +1,4 @@
-package com.honey.honeypot.repository;
+package com.honey.honeypot.repository.geo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,8 +1,9 @@
 package com.honey.honeypot.service;
 
-import com.honey.honeypot.repository.GeoLocation;
-import com.honey.honeypot.repository.GeoLocationRepository;
+import com.honey.honeypot.repository.geo.GeoLocation;
+import com.honey.honeypot.repository.geo.GeoLocationRepository;
 import com.honey.honeypot.service.dto.GeoLocationEntry;
+import com.honey.honeypot.service.mapper.GeoLocationMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
