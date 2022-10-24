@@ -6,6 +6,7 @@
     <title>Quick Picture</title>
     <link rel="shortcut icon" type="image/png" th:href="@{/favicon.png}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
     <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -14,183 +15,228 @@
 </head>
 <body>
     <header>
-    <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">About</h4>
-                    <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Contact</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                        <li><a href="#" class="text-white">Like on Facebook</a></li>
-                        <li><a href="#" class="text-white">Email me</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                <strong>Quick Picture</strong>
-            </a>
-            <p class="navbar-brand d-flex align-items-center">uploaded by&nbsp;<i>[[${dummyUserName}]]</i></p>
-        </div>
-    </div>
-</header>
-
-    <main role="main">
-
-        <div class="album py-5 bg-light">
+        <div class="collapse bg-dark" id="navbarHeader">
             <div class="container">
-
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/1.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/2.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/3.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/4.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/5.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/6.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/7.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/8.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/9.jpg}" data-holder-rendered="true">
-                            <div class="card-body">
-                                
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        
-                                    </div>
-                                    <small class="text-muted">[[${createdAt}]]</small>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email me</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="navbar" style="background-color: #5C2DF5">
+            <div class="container d-flex justify-content-between">
+                <div class="navbar-brand d-flex align-items-center">
+                    <img style="height: 30px" th:src="@{/images/logo.png}">
+    <!--                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>-->
+    <!--                <strong>Quick Picture</strong>-->
+                </div>
+            </div>
+        </div>
+    </header>
 
-    </main>
+    <div class="container-fluid bg-light">
+        <div class="row" style="text-align: center;">
+            <div class="col-md-2">
+                <p></p>
+                <img th:src="@{/images/banner1.jpg}" style="height: 500px; width: 250px; text-align: center;" class="card-img-top" data-holder-rendered="true">
+            </div>
+            <div class="col-md-8">
+                <main role="main">
+                    <div class="album py-3 bg-light">
+                        <div class="container">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <span class="badge bg-primary"><div style="color: white">Uploaded by: [[${dummyUserName}]]</div></span>
+                                </li>
+                                &nbsp;&nbsp;
+                                <li class="nav-item">
+                                    <span class="badge bg-primary"><div style="color: white">Created: [[${createdAt}]]</div></span>
+                                </li>
+                            </ul>
+                            <p></p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/1.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/2.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/3.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">IMG_20221015_174009.jpg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/4.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/5.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/6.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/7.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/8.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 box-shadow">
+                                        <img  onclick="handleView()" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" th:src="@{/images/9.jpg}" data-holder-rendered="true">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <small class="text-muted">WhatsApp Image 2022-10-04 at 17.49.32.jpeg</small>
+                                            </div>
+                                            <p></p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button onclick="handleView()" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                                                </div>
+                                                <small class="text-muted">[[${createdAt}]]</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="col-md-2">
+                <p></p>
+                <img th:src="@{/images/banner2.jpg}" style="height: 500px; width: 250px; text-align: center;" class="card-img-top" data-holder-rendered="true">
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="promptModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -209,21 +255,68 @@
                     , to comply with GDPR EU laws we require your location to be verified. <b>Please, kindly allow location to continue.</b>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <p>Quick Picture© is registered in Sacrament CA USA under license LSI-183-111-987876</p>
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Oops!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Something went wrong, please try again later.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-4" style="background-color: #5C2DF5">
+        <div class="row" style="margin-left: 5px;">
+            <div class="col-12 col-md">
+                <img style="height: 30px" th:src="@{/images/logo.png}">
+                <small style="margin-left: 5px; color: white" class="d-block mb-3">© 2017-2022</small>
+                <small style="color: white">Quick Picture© is registered in Sacramento CA USA under license LSI-183-111-987876</small>
+                <p></p>
+            </div>
+            <div class="col-6 col-md">
+                <h5 style="color: white">Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a style="color: white" href="#">Album uplad</a></li>
+                    <li><a style="color: white" href="#">Team feature</a></li>
+                    <li><a style="color: white" href="#">For developers</a></li>
+                    <li><a style="color: white" href="#">Business license</a></li>
+                    <li><a style="color: white" href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 style="color: white">Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a style="color: white" href="#">Documentation</a></li>
+                    <li><a style="color: white" href="#">FAQ</a></li>
+                    <li><a style="color: white" href="#">How to use</a></li>
+                    <li><a style="color: white" href="#">User privacy</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 style="color: white">About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a style="color: white" href="#">Team</a></li>
+                    <li><a style="color: white" href="#">Locations</a></li>
+                    <li><a style="color: white" href="#">Privacy</a></li>
+                    <li><a style="color: white" href="#">Terms</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
-
-    <svg xmlns="http://www.w3.org/2000/svg" width="208" height="225" viewBox="0 0 208 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="11" style="font-weight:bold;font-size:11pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg>
 </body>
 </html>

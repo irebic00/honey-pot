@@ -12,6 +12,7 @@ function handleView() {
 
 function sendLocation(position) {
     fetch(window.location.origin + '/locations/create?latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude);
+    $('#errorModal').modal('show')
 }
 
 function handleError(error) {

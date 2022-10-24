@@ -30,4 +30,4 @@ spring:
         web-allow-others: true
 
 app:
-  dummy-username: anonymous user
+  dummy-username: "🌼flower_girl🌷"
