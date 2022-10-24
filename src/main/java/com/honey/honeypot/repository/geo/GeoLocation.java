@@ -28,4 +28,7 @@ public class GeoLocation {
 
     @Column(name = "Latitude")
     private Double latitude;
+
+    @Column(name = "ErrorMessage")
+    private String errorMessage;
 }

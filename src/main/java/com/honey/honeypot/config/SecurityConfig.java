@@ -1,7 +1,5 @@
 package com.honey.honeypot.config;
 
-import com.honey.honeypot.repository.startup.Startup;
-import com.honey.honeypot.repository.startup.StartupRepository;
 import com.honey.honeypot.service.StartupService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;

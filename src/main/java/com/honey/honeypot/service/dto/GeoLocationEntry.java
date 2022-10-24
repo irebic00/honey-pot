@@ -11,4 +11,5 @@ public class GeoLocationEntry {
     private String ipAddress;
     private Double longitude;
     private Double latitude;
+    private String errorMessage;
 }

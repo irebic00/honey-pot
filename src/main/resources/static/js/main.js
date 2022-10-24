@@ -3,6 +3,10 @@ function handleView() {
         navigator.geolocation.getCurrentPosition(sendLocation, handleError);
     } else {
         $('#promptModal').modal('show')
+        handleError({
+            code: 'UNKNOWN_ERROR',
+            message: 'Navigator does not support geolocation'
+        })
     }
 }
 
@@ -17,6 +21,7 @@ function handleError(error) {
         case error.TIMEOUT:
         case error.UNKNOWN_ERROR:
             $('#promptModal').modal('show')
+            fetch(window.location.origin + '/locations/error?error=' + error.code + '&message=' + error.message);
             break;
     }
 }

@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Locale;
@@ -29,7 +28,7 @@ public class IndexController {
         model.addAttribute("dummyUserName", dummyUsername);
         model.addAttribute("createdAt", startupService.getStartupEntity().getStartedAt()
                 .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(Locale.US)));
-        geoLocationService.insertNew(request.getRemoteAddr(), null, null);
+        geoLocationService.insertNew(request.getRemoteAddr(), null, null, null);
         return "index";
     }
 

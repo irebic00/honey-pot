@@ -1,3 +1,13 @@
+server:
+  address: localhost # 192.168.0.108
+  port: 8080 # 80
+  ssl:
+    enabled: false
+    key-store:
+    key-store-password:
+    key-store-type:
+    key-alias:
+    key-password:
 spring:
   security:
     user:
@@ -16,6 +26,8 @@ spring:
     console:
       enabled: true
       path: /locations/h2
+      settings:
+        web-allow-others: true
 
 app:
   dummy-username: anonymous user
